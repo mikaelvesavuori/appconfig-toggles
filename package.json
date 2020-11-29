@@ -1,6 +1,6 @@
 {
   "name": "appconfig-toggles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Make better use of Azure App Configuration with Node",
   "main": "build/src/index.js",
   "scripts": {

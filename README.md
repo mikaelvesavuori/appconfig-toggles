@@ -28,11 +28,26 @@ const userGroup = "SomeGroup";
 async function togglesDemo() {
   const act = new AppConfigToggles(config, userGroup);
   await act.init();
-  console.log(act.canUseToggle("SomeToggle"))
+  console.log(act.canUseToggle("SomeToggle"));
+  console.log(act.getToggleDescription("SomeToggle"));
 }
 
 togglesDemo();
 ```
+
+## Available methods
+
+### `canUseToggle()`
+
+Check if a toggle is active. This check verifies group access, rollout for this group, and whether the toggle exists at all.
+
+Example: `act.canUseToggle("SomeToggle")`
+
+### `getToggleDescription()`
+
+Get the description for a named toggled. Good if you, for example, would want that to contain data an application can act on.
+
+Example: `act.getToggleDescription("SomeToggle")`
 
 ## Install
 
